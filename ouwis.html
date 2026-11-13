@@ -1,0 +1,1423 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ouwis_invitations1 | دعوات إلكترونية فاخرة</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Amiri, Tajawal & Playfair Display -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            50: '#FDFBF4',
+                            100: '#FAF3DF',
+                            200: '#F3E2B3',
+                            300: '#E9CA7E',
+                            400: '#DFB04C',
+                            500: '#D4AF37', // Classic Metallic Gold
+                            600: '#B58E22',
+                            700: '#8F6C19',
+                            800: '#6E5116',
+                            900: '#594115',
+                        },
+                        ivory: '#FCFBF9',
+                        pearl: '#F8F6F0'
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'sans-serif'],
+                        serif: ['Amiri', 'serif'],
+                        latin: ['Playfair Display', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Luxury Styling & Animations */
+        body {
+            background-color: #FCFBF9;
+            color: #2C261B;
+            overflow-x: hidden;
+        }
+
+        /* Metallic Gold Text Gradient */
+        .gold-text-gradient {
+            background: linear-gradient(135deg, #9E7B1C 0%, #D4AF37 30%, #F5E09B 50%, #C59B27 75%, #8F6C19 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% auto;
+            animation: goldShine 4s linear infinite;
+        }
+
+        @keyframes goldShine {
+            to {
+                background-position: 200% center;
+            }
+        }
+
+        /* Gold Foil Border & Shimmer Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #C59B27 0%, #E5C567 50%, #B58E22 100%);
+            background-size: 200% auto;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.4);
+        }
+        .btn-gold:hover {
+            background-position: right center;
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px -5px rgba(212, 175, 55, 0.6);
+        }
+
+        .btn-outline-gold {
+            border: 1.5px solid #D4AF37;
+            background: rgba(255, 255, 255, 0.85);
+            transition: all 0.35s ease;
+        }
+        .btn-outline-gold:hover {
+            background: linear-gradient(135deg, #FDFBF4 0%, #FAF3DF 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.25);
+        }
+
+        /* Luxury Card Styling */
+        .luxury-card {
+            background: linear-gradient(180deg, #FFFFFF 0%, #FCF9F2 100%);
+            border: 1px solid rgba(212, 175, 55, 0.35);
+            box-shadow: 0 15px 35px -10px rgba(143, 108, 25, 0.08);
+            transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .luxury-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,248,220,0.6) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg);
+            transition: left 0.75s ease;
+            pointer-events: none;
+            z-index: 20;
+        }
+        .luxury-card:hover::before {
+            left: 150%;
+        }
+        .luxury-card:hover {
+            transform: translateY(-8px);
+            border-color: #D4AF37;
+            box-shadow: 0 25px 45px -12px rgba(212, 175, 55, 0.22);
+        }
+
+        /* Floating Animation */
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(1.5deg); }
+        }
+        .animate-float {
+            animation: floatSlow 6s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: floatSlow 7s ease-in-out 2s infinite;
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Gold Pattern Background */
+        .bg-royal-pattern {
+            background-image: radial-gradient(rgba(212, 175, 55, 0.14) 1px, transparent 1px),
+                              radial-gradient(rgba(212, 175, 55, 0.08) 1px, #FCFBF9 1px);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px;
+        }
+
+        /* Modal Animation */
+        @keyframes modalPop {
+            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
+        }
+        .modal-animate {
+            animation: modalPop 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Wax Seal Pulse */
+        @keyframes pulseGold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.5); }
+            50% { box-shadow: 0 0 0 12px rgba(212, 175, 55, 0); }
+        }
+        .wax-seal {
+            animation: pulseGold 3s infinite;
+        }
+
+        /* Multi-Page 3D Card Transition & Page Flip Animations */
+        .invitation-stage {
+            perspective: 1400px;
+        }
+        .inv-page {
+            transition: all 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+            transform-style: preserve-3d;
+            backface-visibility: hidden;
+        }
+        .inv-page-enter-next {
+            animation: pageFlipNext 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        .inv-page-enter-prev {
+            animation: pageFlipPrev 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+        }
+        @keyframes pageFlipNext {
+            0% {
+                opacity: 0;
+                transform: rotateY(-28deg) translateX(-35px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg) translateX(0) scale(1);
+            }
+        }
+        @keyframes pageFlipPrev {
+            0% {
+                opacity: 0;
+                transform: rotateY(28deg) translateX(35px) scale(0.95);
+            }
+            100% {
+                opacity: 1;
+                transform: rotateY(0deg) translateX(0) scale(1);
+            }
+        }
+
+        /* Envelope Flap & Staggered Content Reveal */
+        @keyframes envelopeFlapOpen {
+            0% { transform: rotateX(0deg); }
+            100% { transform: rotateX(180deg); opacity: 0.35; }
+        }
+        .flap-opened {
+            transform-origin: top center;
+            animation: envelopeFlapOpen 0.8s ease forwards;
+        }
+
+        @keyframes staggerFadeUp {
+            0% { opacity: 0; transform: translateY(14px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .stagger-1 { animation: staggerFadeUp 0.5s ease 0.1s both; }
+        .stagger-2 { animation: staggerFadeUp 0.5s ease 0.22s both; }
+        .stagger-3 { animation: staggerFadeUp 0.5s ease 0.34s both; }
+        .stagger-4 { animation: staggerFadeUp 0.5s ease 0.46s both; }
+
+        /* Shimmering Gold Ribbon */
+        @keyframes ribbonGlow {
+            0%, 100% { filter: drop-shadow(0 2px 6px rgba(212, 175, 55, 0.35)); }
+            50% { filter: drop-shadow(0 4px 14px rgba(212, 175, 55, 0.75)); }
+        }
+        .gold-ribbon-glow {
+            animation: ribbonGlow 2.8s infinite ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-royal-pattern antialiased selection:bg-gold-200 selection:text-gold-900">
+
+    <!-- Floating Golden Sparkles Canvas -->
+    <canvas id="goldParticles" class="fixed inset-0 pointer-events-none z-0"></canvas>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-40 bg-white/85 backdrop-blur-md border-b border-gold-200/70 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Brand Identity -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-11 h-11 rounded-full bg-gradient-to-tr from-gold-600 via-gold-400 to-gold-200 p-[2px] shadow-md group-hover:rotate-12 transition-transform duration-500">
+                    <div class="w-full h-full bg-white rounded-full flex items-center justify-center">
+                        <span class="font-latin font-bold text-xl gold-text-gradient">O</span>
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-latin font-bold text-lg sm:text-xl tracking-wide text-stone-800 group-hover:text-gold-700 transition-colors" dir="ltr">ouwis_invitations1</span>
+                    <span class="text-xs text-gold-700 font-medium">فن الدعوات الإلكترونية الفاخرة</span>
+                </div>
+            </a>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-700">
+                <a href="#home" class="hover:text-gold-600 transition-colors">الرئيسية</a>
+                <a href="#showcase" class="hover:text-gold-600 transition-colors">نماذج الدعوات</a>
+                <a href="#features" class="hover:text-gold-600 transition-colors">مميزات تصاميمنا</a>
+                <a href="#contact" class="hover:text-gold-600 transition-colors">تواصل معنا</a>
+            </nav>
+
+            <!-- Quick Social Action Buttons -->
+            <div class="flex items-center gap-2.5 sm:gap-3">
+                <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                   class="btn-outline-gold px-3.5 py-2 rounded-full text-gold-800 text-xs sm:text-sm font-bold flex items-center gap-2">
+                    <i class="fab fa-instagram text-base text-gold-600"></i>
+                    <span class="hidden sm:inline">إنستغرام</span>
+                </a>
+                <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1%20بغيت%20نستفسر%20على%20تصميم%20دعوة%20إلكترونية" target="_blank" rel="noopener noreferrer"
+                   class="btn-gold px-4 py-2 rounded-full text-white text-xs sm:text-sm font-bold flex items-center gap-2">
+                    <i class="fab fa-whatsapp text-base"></i>
+                    <span>اطلب دعوتك</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative z-10 pt-12 pb-20 lg:pt-20 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Right Text Content -->
+                <div class="lg:col-span-7 text-center lg:text-right space-y-6">
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-100/80 border border-gold-300 text-gold-800 text-xs sm:text-sm font-semibold shadow-sm">
+                        <i class="fas fa-crown text-gold-600"></i>
+                        <span>تصاميم ملكية حصرية تليق بأجمل لحظاتكم</span>
+                    </div>
+
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-stone-900">
+                        اجعل دعوة مناسبتك <br>
+                        <span class="gold-text-gradient">تحفة فنية لا تُنسى</span>
+                    </h1>
+
+                    <p class="text-base sm:text-lg text-stone-600 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        مرحباً بكم في <span class="font-latin font-bold text-gold-700" dir="ltr">@ouwis_invitations1</span>. نصمم لكم أرقى الدعوات الإلكترونية المتحركة والثابتة لحفلات الزواج، الخطوبة، أعياد الميلاد، والعقيقة بلمسة ذهبية ساحرة وجودة عالية.
+                    </p>
+
+                    <!-- Direct Links to Instagram & Both WhatsApp Numbers -->
+                    <div class="pt-4 flex flex-col sm:flex-row flex-wrap items-center justify-center lg:justify-start gap-3.5">
+                        <!-- Instagram Link -->
+                        <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto btn-gold text-white px-7 py-3.5 rounded-full font-bold text-sm sm:text-base flex items-center justify-center gap-2.5">
+                            <i class="fab fa-instagram text-xl"></i>
+                            <span dir="ltr">@ouwis_invitations1</span>
+                        </a>
+
+                        <!-- WhatsApp 1 -->
+                        <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1%20بغيت%20نطلب%20دعوة%20إلكترونية" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto btn-outline-gold text-stone-800 px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg text-emerald-600"></i>
+                            <span>واتساب 1:</span>
+                            <span dir="ltr" class="font-latin text-gold-800">0710674314</span>
+                        </a>
+
+                        <!-- WhatsApp 2 -->
+                        <a href="https://wa.me/212709338221?text=السلام%20عليكم%20ouwis_invitations1%20بغيت%20نطلب%20دعوة%20إلكترونية" target="_blank" rel="noopener noreferrer"
+                           class="w-full sm:w-auto btn-outline-gold text-stone-800 px-6 py-3.5 rounded-full font-bold text-sm flex items-center justify-center gap-2">
+                            <i class="fab fa-whatsapp text-lg text-emerald-600"></i>
+                            <span>واتساب 2:</span>
+                            <span dir="ltr" class="font-latin text-gold-800">0709338221</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="pt-6 grid grid-cols-3 gap-4 max-w-lg mx-auto lg:mx-0 border-t border-gold-200/70">
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">+100</div>
+                            <div class="text-xs sm:text-sm text-stone-500">تصميم حصري</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">HD / 4K</div>
+                            <div class="text-xs sm:text-sm text-stone-500">جودة عالية للعرض</div>
+                        </div>
+                        <div>
+                            <div class="font-serif text-2xl sm:text-3xl font-bold text-gold-600">24/7</div>
+                            <div class="text-xs sm:text-sm text-stone-500">تواصل سريع ومباشر</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Left Visual Showcase Mockup (Floating Luxury Card) -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <!-- Decorative Gold Halo -->
+                    <div class="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-gradient-to-tr from-gold-300/30 via-gold-100/40 to-transparent blur-2xl -z-10"></div>
+
+                    <!-- Main Luxury Envelope & Card Preview -->
+                    <div class="relative w-full max-w-sm animate-float">
+                        <div class="bg-white rounded-3xl p-4 sm:p-5 shadow-2xl border-2 border-gold-300/80 relative">
+                            <!-- Inner Ornamental Gold Frame -->
+                            <div class="border border-gold-400 rounded-2xl p-6 sm:p-8 text-center bg-gradient-to-b from-ivory via-white to-pearl relative overflow-hidden">
+                                <!-- Corner Ornaments SVG -->
+                                <svg class="w-12 h-12 text-gold-500 absolute top-2 right-2 opacity-80" viewBox="0 0 100 100" fill="none">
+                                    <path d="M5 5 H60 C35 5 5 35 5 60 Z" fill="currentColor" fill-opacity="0.2"/>
+                                    <path d="M10 10 H70 M10 10 V70 M10 35 C25 35 35 25 35 10" stroke="currentColor" stroke-width="2.5"/>
+                                </svg>
+                                <svg class="w-12 h-12 text-gold-500 absolute bottom-2 left-2 rotate-180 opacity-80" viewBox="0 0 100 100" fill="none">
+                                    <path d="M5 5 H60 C35 5 5 35 5 60 Z" fill="currentColor" fill-opacity="0.2"/>
+                                    <path d="M10 10 H70 M10 10 V70 M10 35 C25 35 35 25 35 10" stroke="currentColor" stroke-width="2.5"/>
+                                </svg>
+
+                                <p class="text-xs tracking-widest text-gold-700 font-semibold uppercase mb-2">دعوة زفاف ملكية</p>
+                                <div class="w-14 h-[1px] bg-gold-400 mx-auto mb-4"></div>
+                                
+                                <h2 class="font-serif text-3xl sm:text-4xl font-bold gold-text-gradient mb-2">يوسف & سلمى</h2>
+                                <p class="font-latin italic text-sm text-gold-700 mb-4">Youssef & Salma</p>
+                                
+                                <p class="text-xs sm:text-sm text-stone-600 leading-relaxed mb-5">
+                                    تتشرف عائلتا الكريمين بدعوتكم لحضور حفل زفافهما البهيج ومشاركتهما فرحة العمر
+                                </p>
+
+                                <div class="py-2.5 px-4 rounded-xl bg-gold-50 border border-gold-200 inline-block mb-4">
+                                    <span class="text-xs font-bold text-gold-800">السبت • 24 ماي • قصر الأفراح</span>
+                                </div>
+
+                                <!-- Gold Wax Seal -->
+                                <div class="mt-2 flex justify-center">
+                                    <div class="w-12 h-12 rounded-full bg-gradient-to-br from-gold-400 via-gold-500 to-gold-700 text-white flex items-center justify-center shadow-lg wax-seal border-2 border-gold-200">
+                                        <span class="font-latin font-bold text-sm">Y&S</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge -->
+                        <div class="absolute -bottom-5 -right-4 bg-white px-4 py-2.5 rounded-2xl shadow-xl border border-gold-300 flex items-center gap-2.5 animate-float-delayed">
+                            <div class="w-8 h-8 rounded-full bg-gold-100 flex items-center justify-center text-gold-600">
+                                <i class="fas fa-sparkles"></i>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-xs font-bold text-stone-800">تصميم حسب الطلب</p>
+                                <p class="text-[11px] text-gold-700">بالأسماء والتفاصيل الخاصة بكم</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Invitations Showcase Section -->
+    <section id="showcase" class="relative z-10 py-20 bg-white/70 border-y border-gold-200/60">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-12 reveal">
+                <span class="text-xs font-bold tracking-wider uppercase text-gold-600 bg-gold-50 px-4 py-1.5 rounded-full border border-gold-200">تجربة تفاعلية متعددة الصفحات</span>
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mt-4 mb-4">
+                    نماذج من <span class="gold-text-gradient">دعواتنا المتحركة</span>
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    اضغط على أي نموذج لتجربة فتح الظرف بالختم الشمعي وتصفح جميع صفحات الدعوة (الغلاف، التفاصيل، البرنامج والموقع) بحركات انسيابية فاخرة.
+                </p>
+            </div>
+
+            <!-- Category Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 mb-12 reveal">
+                <button onclick="filterCards('all')" data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-gold-500 text-white shadow-md">
+                    جميع الدعوات (4 نماذج)
+                </button>
+                <button onclick="filterCards('wedding')" data-filter="wedding" class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-stone-700 border border-gold-200 hover:border-gold-400">
+                    <i class="fas fa-crown ml-1 text-gold-600"></i> دعوة زفاف ملكية
+                </button>
+                <button onclick="filterCards('engagement')" data-filter="engagement" class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-stone-700 border border-gold-200 hover:border-gold-400">
+                    <i class="fas fa-gem ml-1 text-gold-600"></i> دعوة خطوبة راقية
+                </button>
+                <button onclick="filterCards('birthday')" data-filter="birthday" class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-stone-700 border border-gold-200 hover:border-gold-400">
+                    <i class="fas fa-cake-candles ml-1 text-gold-600"></i> عيد ميلاد فاخر
+                </button>
+                <button onclick="filterCards('baby')" data-filter="baby" class="filter-btn px-5 py-2.5 rounded-full text-sm font-bold transition-all bg-white text-stone-700 border border-gold-200 hover:border-gold-400">
+                    <i class="fas fa-baby-carriage ml-1 text-gold-600"></i> عقيقة / تخرج
+                </button>
+            </div>
+
+            <!-- Invitations Grid (4 Rich Multi-Page Templates) -->
+            <div id="cardsGrid" class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                
+                <!-- Template 1: Royal Wedding Invitation (3 Pages) -->
+                <div class="invitation-item luxury-card rounded-3xl p-6 flex flex-col justify-between reveal" data-category="wedding">
+                    <div>
+                        <div onclick="openMultiPageModal('wedding')"
+                             class="cursor-pointer group relative rounded-2xl border border-gold-300 bg-gradient-to-b from-white via-gold-50/50 to-white p-7 text-center shadow-inner overflow-hidden">
+                            <div class="absolute inset-2.5 border border-gold-400/70 rounded-xl pointer-events-none"></div>
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <span class="text-[11px] font-bold text-gold-800 bg-gold-100 px-3 py-0.5 rounded-full border border-gold-300">3 صفحات تفاعلية</span>
+                                <span class="text-[11px] font-bold text-stone-600 bg-white px-2.5 py-0.5 rounded-full border border-gold-200"><i class="fas fa-layer-group text-gold-600 ml-1"></i>غلاف + تفاصيل + برنامج</span>
+                            </div>
+                            <div class="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-gold-400 to-gold-700 text-white flex items-center justify-center text-lg shadow-md mb-2 wax-seal">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <h3 class="font-serif text-3xl font-bold text-stone-800 group-hover:scale-105 transition-transform">أمين & نهيلة</h3>
+                            <p class="font-latin text-xs text-gold-600 italic mb-3">Amine & Nouhaila • Royal Wedding</p>
+                            <p class="text-xs text-stone-500 max-w-sm mx-auto mb-5">تجربة فتح الظرف بالختم الشمعي الذهبي مع تفاصيل الليلة الملكية وبرنامج الحفل والموقع الجغرافي.</p>
+                            <div class="inline-flex items-center gap-2 text-xs font-bold text-white btn-gold px-5 py-2.5 rounded-full">
+                                <i class="fas fa-book-open"></i>
+                                <span>افتح الدعوة التفاعلية (3 صفحات)</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 px-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-lg text-stone-800">1. دعوة زفاف ملكية (Royal Wedding)</h4>
+                                <span class="text-xs font-semibold text-gold-700 bg-gold-50 px-2.5 py-1 rounded-lg border border-gold-200">زواج</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mt-1">الغلاف والختم الذهبي • تفاصيل الحفل والأسماء • برنامج الليلة والموقع.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gold-100 flex items-center gap-2.5">
+                        <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1%20عجبني%20نموذج%20(دعوة%20زفاف%20ملكية%20متعددة%20الصفحات)%20بغيت%20نطلب%20بحالو" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 btn-gold text-white text-xs font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-1.5">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            <span>اطلب عبر واتساب</span>
+                        </a>
+                        <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                           class="btn-outline-gold text-gold-800 p-3 rounded-xl flex items-center justify-center" title="شاهد المزيد على إنستغرام">
+                            <i class="fab fa-instagram text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Template 2: Luxury Engagement Invitation (3 Pages) -->
+                <div class="invitation-item luxury-card rounded-3xl p-6 flex flex-col justify-between reveal" data-category="engagement">
+                    <div>
+                        <div onclick="openMultiPageModal('engagement')"
+                             class="cursor-pointer group relative rounded-2xl border border-gold-300 bg-gradient-to-tr from-pearl via-white to-gold-50 p-7 text-center shadow-inner overflow-hidden">
+                            <div class="absolute inset-2.5 border border-dashed border-gold-400/80 rounded-xl pointer-events-none"></div>
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <span class="text-[11px] font-bold text-gold-800 bg-gold-100 px-3 py-0.5 rounded-full border border-gold-300">3 صفحات تفاعلية</span>
+                                <span class="text-[11px] font-bold text-stone-600 bg-white px-2.5 py-0.5 rounded-full border border-gold-200"><i class="fas fa-layer-group text-gold-600 ml-1"></i>ترحيب + موعد + تأكيد</span>
+                            </div>
+                            <div class="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-gold-400 to-gold-700 text-white flex items-center justify-center text-lg shadow-md mb-2 wax-seal">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="font-serif text-3xl font-bold text-stone-800 group-hover:scale-105 transition-transform">حمزة & إيمان</h3>
+                            <p class="font-latin text-xs text-gold-600 italic mb-3">Hamza & Imane • Engagement</p>
+                            <p class="text-xs text-stone-500 max-w-sm mx-auto mb-5">بطاقة ترحيب متحركة مع تفاصيل موعد الخطوبة وعنوان القاعة وبطاقة تأكيد الحضور.</p>
+                            <div class="inline-flex items-center gap-2 text-xs font-bold text-white btn-gold px-5 py-2.5 rounded-full">
+                                <i class="fas fa-book-open"></i>
+                                <span>افتح الدعوة التفاعلية (3 صفحات)</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 px-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-lg text-stone-800">2. دعوة خطوبة راقية (Engagement)</h4>
+                                <span class="text-xs font-semibold text-gold-700 bg-gold-50 px-2.5 py-1 rounded-lg border border-gold-200">خطوبة</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mt-1">بطاقة الترحيب المتحركة • موعد الخطوبة • تفاصيل القاعة وتأكيد الحضور.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gold-100 flex items-center gap-2.5">
+                        <a href="https://wa.me/212709338221?text=السلام%20عليكم%20ouwis_invitations1%20عجبني%20نموذج%20(دعوة%20خطوبة%20راقية%20متعددة%20الصفحات)%20بغيت%20نطلب%20بحالو" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 btn-gold text-white text-xs font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-1.5">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            <span>اطلب عبر واتساب</span>
+                        </a>
+                        <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                           class="btn-outline-gold text-gold-800 p-3 rounded-xl flex items-center justify-center" title="شاهد المزيد على إنستغرام">
+                            <i class="fab fa-instagram text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Template 3: Luxury Birthday Invitation (3 Pages) -->
+                <div class="invitation-item luxury-card rounded-3xl p-6 flex flex-col justify-between reveal" data-category="birthday">
+                    <div>
+                        <div onclick="openMultiPageModal('birthday')"
+                             class="cursor-pointer group relative rounded-2xl border border-gold-300 bg-gradient-to-b from-gold-50/70 via-white to-pearl p-7 text-center shadow-inner overflow-hidden">
+                            <div class="absolute inset-2.5 border border-gold-400/70 rounded-xl pointer-events-none"></div>
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <span class="text-[11px] font-bold text-gold-800 bg-gold-100 px-3 py-0.5 rounded-full border border-gold-300">3 صفحات تفاعلية</span>
+                                <span class="text-[11px] font-bold text-stone-600 bg-white px-2.5 py-0.5 rounded-full border border-gold-200"><i class="fas fa-layer-group text-gold-600 ml-1"></i>غلاف + احتفال + فقرات</span>
+                            </div>
+                            <div class="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-gold-400 to-gold-700 text-white flex items-center justify-center text-lg shadow-md mb-2 wax-seal">
+                                <i class="fas fa-cake-candles"></i>
+                            </div>
+                            <h3 class="font-serif text-3xl font-bold text-stone-800 group-hover:scale-105 transition-transform">عيد ميلاد ريتاج</h3>
+                            <p class="font-latin text-xs text-gold-600 italic mb-3">Happy Birthday Ritaj • Luxury Edition</p>
+                            <p class="text-xs text-stone-500 max-w-sm mx-auto mb-5">غلاف ذهبي لامع مع تفاصيل الاحتفال وفقرات المفاجآت ومكان الحفل للأطفال والعائلة.</p>
+                            <div class="inline-flex items-center gap-2 text-xs font-bold text-white btn-gold px-5 py-2.5 rounded-full">
+                                <i class="fas fa-book-open"></i>
+                                <span>افتح الدعوة التفاعلية (3 صفحات)</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 px-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-lg text-stone-800">3. دعوة عيد ميلاد فاخرة (Birthday)</h4>
+                                <span class="text-xs font-semibold text-gold-700 bg-gold-50 px-2.5 py-1 rounded-lg border border-gold-200">عيد ميلاد</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mt-1">غلاف ذهبي لامع • تفاصيل الاحتفال • فقرات الحفل والمكان.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gold-100 flex items-center gap-2.5">
+                        <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1%20عجبني%20نموذج%20(دعوة%20عيد%20ميلاد%20فاخرة%20متعددة%20الصفحات)%20بغيت%20نطلب%20بحالو" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 btn-gold text-white text-xs font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-1.5">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            <span>اطلب عبر واتساب</span>
+                        </a>
+                        <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                           class="btn-outline-gold text-gold-800 p-3 rounded-xl flex items-center justify-center" title="شاهد المزيد على إنستغرام">
+                            <i class="fab fa-instagram text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Template 4: Aqiqah / Graduation Celebration (3 Pages) -->
+                <div class="invitation-item luxury-card rounded-3xl p-6 flex flex-col justify-between reveal" data-category="baby">
+                    <div>
+                        <div onclick="openMultiPageModal('baby')"
+                             class="cursor-pointer group relative rounded-2xl border border-gold-300 bg-gradient-to-b from-white via-pearl to-gold-50/60 p-7 text-center shadow-inner overflow-hidden">
+                            <div class="absolute inset-2.5 border-2 border-double border-gold-400/80 rounded-xl pointer-events-none"></div>
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <span class="text-[11px] font-bold text-gold-800 bg-gold-100 px-3 py-0.5 rounded-full border border-gold-300">3 صفحات تفاعلية</span>
+                                <span class="text-[11px] font-bold text-stone-600 bg-white px-2.5 py-0.5 rounded-full border border-gold-200"><i class="fas fa-layer-group text-gold-600 ml-1"></i>تهنئة + مناسبة + موقع</span>
+                            </div>
+                            <div class="w-12 h-12 mx-auto rounded-full bg-gradient-to-br from-gold-400 to-gold-700 text-white flex items-center justify-center text-lg shadow-md mb-2 wax-seal">
+                                <i class="fas fa-baby-carriage"></i>
+                            </div>
+                            <h3 class="font-serif text-3xl font-bold text-stone-800 group-hover:scale-105 transition-transform">عقيقة المولود آدم</h3>
+                            <p class="font-latin text-xs text-gold-600 italic mb-3">Welcome Baby Adam • Celebration</p>
+                            <p class="text-xs text-stone-500 max-w-sm mx-auto mb-5">بطاقة تهنئة ملكية بقدوم المولود أو التخرج مع تفاصيل المناسبة وبرنامج الاستقبال.</p>
+                            <div class="inline-flex items-center gap-2 text-xs font-bold text-white btn-gold px-5 py-2.5 rounded-full">
+                                <i class="fas fa-book-open"></i>
+                                <span>افتح الدعوة التفاعلية (3 صفحات)</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 px-1">
+                            <div class="flex items-center justify-between">
+                                <h4 class="font-bold text-lg text-stone-800">4. دعوة عقيقة / تخرج مميزة</h4>
+                                <span class="text-xs font-semibold text-gold-700 bg-gold-50 px-2.5 py-1 rounded-lg border border-gold-200">مناسبات</span>
+                            </div>
+                            <p class="text-xs text-stone-500 mt-1">بطاقة التهنئة • تفاصيل المناسبة • البرنامج والموقع.</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-5 pt-4 border-t border-gold-100 flex items-center gap-2.5">
+                        <a href="https://wa.me/212709338221?text=السلام%20عليكم%20ouwis_invitations1%20عجبني%20نموذج%20(دعوة%20عقيقة%20وتخرج%20متعددة%20الصفحات)%20بغيت%20نطلب%20بحالو" target="_blank" rel="noopener noreferrer"
+                           class="flex-1 btn-gold text-white text-xs font-bold py-3 px-4 rounded-xl text-center flex items-center justify-center gap-1.5">
+                            <i class="fab fa-whatsapp text-sm"></i>
+                            <span>اطلب عبر واتساب</span>
+                        </a>
+                        <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                           class="btn-outline-gold text-gold-800 p-3 rounded-xl flex items-center justify-center" title="شاهد المزيد على إنستغرام">
+                            <i class="fab fa-instagram text-base"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Instagram CTA Banner inside Showcase -->
+            <div class="mt-14 text-center reveal">
+                <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                   class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white border-2 border-gold-400 text-stone-800 font-bold shadow-lg hover:bg-gold-50 transition-all group">
+                    <i class="fab fa-instagram text-2xl text-gold-600 group-hover:scale-110 transition-transform"></i>
+                    <span>شاهد المزيد من الفيديوهات والتصاميم الحصرية على إنستغرام</span>
+                    <span class="font-latin text-gold-700 font-extrabold" dir="ltr">@ouwis_invitations1</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="relative z-10 py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">
+                    لماذا تختار <span class="gold-text-gradient font-latin" dir="ltr">ouwis_invitations1</span> ؟
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base mt-3">نجمع بين الفخامة الملكية وسهولة المشاركة عبر الواتساب وجميع منصات التواصل</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/90 p-6 rounded-3xl border border-gold-200/80 shadow-sm hover:shadow-md transition-all text-center reveal">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 text-2xl mb-4">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-800 mb-2">تصميم حسب ذوقكم</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">تعديل كامل للألوان، الخطوط، العبارات، والموسيقى لتناسب طابع حفلكم.</p>
+                </div>
+
+                <div class="bg-white/90 p-6 rounded-3xl border border-gold-200/80 shadow-sm hover:shadow-md transition-all text-center reveal">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 text-2xl mb-4">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-800 mb-2">دعوات فيديو وصور</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">نقدم دعوات متحركة احترافية بالموسيقى ودعوات صور عالية الدقة للطباعة أو الإرسال.</p>
+                </div>
+
+                <div class="bg-white/90 p-6 rounded-3xl border border-gold-200/80 shadow-sm hover:shadow-md transition-all text-center reveal">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 text-2xl mb-4">
+                        <i class="fas fa-location-dot"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-800 mb-2">إضافة موقع القاعة</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">إمكانية إرفاق رابط الموقع الجغرافي (GPS) أو رمز QR لتسهيل وصول ضيوفكم.</p>
+                </div>
+
+                <div class="bg-white/90 p-6 rounded-3xl border border-gold-200/80 shadow-sm hover:shadow-md transition-all text-center reveal">
+                    <div class="w-14 h-14 mx-auto rounded-2xl bg-gold-50 border border-gold-200 flex items-center justify-center text-gold-600 text-2xl mb-4">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3 class="font-bold text-lg text-stone-800 mb-2">سرعة في الإنجاز</h3>
+                    <p class="text-xs sm:text-sm text-stone-500 leading-relaxed">تسليم سريع ومباشر عبر الواتساب بجودة فائقة وجاهزة للإرسال الفوري لضيوفكم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Direct Links Section -->
+    <section id="contact" class="relative z-10 py-20 bg-gradient-to-b from-white to-gold-50/70 border-t border-gold-200/70">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-[2.5rem] p-8 sm:p-12 shadow-2xl border-2 border-gold-300/80 relative overflow-hidden text-center reveal">
+                
+                <!-- Decorative Corner Gold Lines -->
+                <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-gold-200/40 to-transparent rounded-bl-full pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 w-32 h-32 bg-gradient-to-tr from-gold-200/40 to-transparent rounded-tr-full pointer-events-none"></div>
+
+                <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-gold-50 border border-gold-300 text-gold-800 text-xs font-bold mb-4">
+                    <i class="fas fa-headset text-gold-600"></i>
+                    <span>تواصل مباشر وسريع</span>
+                </span>
+
+                <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-stone-900 mb-4">
+                    جاهزون لتصميم <span class="gold-text-gradient">دعوة أحلامكم</span>
+                </h2>
+                <p class="text-stone-600 text-sm sm:text-base max-w-xl mx-auto mb-10">
+                    اضغط على أي رابط أسفله للتواصل معنا مباشرة عبر الواتساب أو زيارة صفحتنا الرسمية على الإنستغرام للاطلاع على آخر الأعمال.
+                </p>
+
+                <!-- 3 Direct Clickable Contact Cards -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
+                    
+                    <!-- WhatsApp Number 1 -->
+                    <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1%20بغيت%20نطلب%20تصميم%20دعوة" target="_blank" rel="noopener noreferrer"
+                       class="group p-6 rounded-3xl bg-gradient-to-b from-white to-pearl border border-gold-300 hover:border-gold-500 shadow-md hover:shadow-xl transition-all flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="text-xs font-bold text-stone-500 mb-1">الرقم الأول (واتساب)</span>
+                        <span dir="ltr" class="font-latin font-bold text-xl text-stone-800 group-hover:text-gold-700 transition-colors">0710674314</span>
+                        <span class="mt-3 text-xs font-bold text-gold-700 flex items-center gap-1">
+                            <span>اضغط للمراسلة</span>
+                            <i class="fas fa-arrow-left text-[10px] group-hover:-translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+
+                    <!-- Instagram Official Page -->
+                    <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                       class="group p-6 rounded-3xl btn-gold text-white shadow-lg hover:shadow-2xl transition-all flex flex-col items-center justify-center">
+                        <div class="w-14 h-14 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 text-white flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <span class="text-xs font-bold text-white/90 mb-1">صفحتنا على إنستغرام</span>
+                        <span dir="ltr" class="font-latin font-bold text-lg tracking-wide">@ouwis_invitations1</span>
+                        <span class="mt-3 text-xs font-bold bg-white/20 px-3 py-1 rounded-full flex items-center gap-1">
+                            <span>زيارة الصفحة</span>
+                            <i class="fas fa-external-link-alt text-[10px]"></i>
+                        </span>
+                    </a>
+
+                    <!-- WhatsApp Number 2 -->
+                    <a href="https://wa.me/212709338221?text=السلام%20عليكم%20ouwis_invitations1%20بغيت%20نطلب%20تصميم%20دعوة" target="_blank" rel="noopener noreferrer"
+                       class="group p-6 rounded-3xl bg-gradient-to-b from-white to-pearl border border-gold-300 hover:border-gold-500 shadow-md hover:shadow-xl transition-all flex flex-col items-center">
+                        <div class="w-14 h-14 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center text-2xl mb-3 group-hover:scale-110 transition-transform">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <span class="text-xs font-bold text-stone-500 mb-1">الرقم الثاني (واتساب)</span>
+                        <span dir="ltr" class="font-latin font-bold text-xl text-stone-800 group-hover:text-gold-700 transition-colors">0709338221</span>
+                        <span class="mt-3 text-xs font-bold text-gold-700 flex items-center gap-1">
+                            <span>اضغط للمراسلة</span>
+                            <i class="fas fa-arrow-left text-[10px] group-hover:-translate-x-1 transition-transform"></i>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative z-10 bg-white border-t border-gold-200/80 py-8 text-center">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-2">
+                <span class="font-latin font-bold text-lg gold-text-gradient" dir="ltr">ouwis_invitations1</span>
+                <span class="text-stone-400">|</span>
+                <span class="text-xs text-stone-500">جميع الحقوق محفوظة © 2026</span>
+            </div>
+            <div class="flex items-center gap-4 text-sm font-semibold text-stone-600">
+                <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer" class="hover:text-gold-600 transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-instagram text-gold-600"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://wa.me/212710674314" target="_blank" rel="noopener noreferrer" class="hover:text-gold-600 transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-whatsapp text-emerald-600"></i>
+                    <span dir="ltr">0710674314</span>
+                </a>
+                <a href="https://wa.me/212709338221" target="_blank" rel="noopener noreferrer" class="hover:text-gold-600 transition-colors flex items-center gap-1.5">
+                    <i class="fab fa-whatsapp text-emerald-600"></i>
+                    <span dir="ltr">0709338221</span>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Quick WhatsApp Button (Mobile & Desktop) -->
+    <a href="https://wa.me/212710674314?text=السلام%20عليكم%20ouwis_invitations1" target="_blank" rel="noopener noreferrer"
+       aria-label="تواصل عبر واتساب"
+       class="fixed bottom-5 left-5 z-40 w-14 h-14 rounded-full bg-gradient-to-tr from-emerald-600 to-emerald-400 text-white shadow-2xl flex items-center justify-center text-2xl hover:scale-110 transition-transform border-2 border-white">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Multi-Page Interactive Invitation Preview Modal -->
+    <div id="previewModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-stone-900/70 backdrop-blur-md p-3 sm:p-5 overflow-y-auto">
+        <div class="bg-white rounded-[2rem] max-w-lg w-full p-4 sm:p-6 shadow-2xl border-2 border-gold-400 relative modal-animate my-auto">
+            
+            <!-- Top Bar: Template Title, Page Indicator & Close -->
+            <div class="flex items-center justify-between mb-3 px-1">
+                <div class="flex items-center gap-2">
+                    <span id="modalTemplateName" class="text-xs sm:text-sm font-bold text-gold-800 bg-gold-50 border border-gold-200 px-3 py-1 rounded-full">دعوة زفاف ملكية</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <span id="pageCounterBadge" class="text-xs font-bold text-stone-600 bg-pearl px-2.5 py-1 rounded-full border border-gold-200">صفحة 1 من 3</span>
+                    <button onclick="closePreviewModal()" class="w-8 h-8 rounded-full bg-gold-50 hover:bg-gold-100 text-gold-800 flex items-center justify-center transition-colors">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Interactive Page Tabs -->
+            <div class="grid grid-cols-3 gap-1.5 bg-pearl p-1.5 rounded-2xl border border-gold-200/80 mb-4">
+                <button onclick="goToPage(0)" id="tabBtn0" class="page-tab-btn py-1.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all bg-gold-500 text-white shadow-sm">
+                    1. الغلاف والختم
+                </button>
+                <button onclick="goToPage(1)" id="tabBtn1" class="page-tab-btn py-1.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all text-stone-600 hover:text-gold-800">
+                    2. تفاصيل الحفل
+                </button>
+                <button onclick="goToPage(2)" id="tabBtn2" class="page-tab-btn py-1.5 px-2 rounded-xl text-[11px] sm:text-xs font-bold transition-all text-stone-600 hover:text-gold-800">
+                    3. البرنامج والموقع
+                </button>
+            </div>
+
+            <!-- 3D Invitation Stage -->
+            <div class="invitation-stage relative min-h-[380px] sm:min-h-[410px] flex items-stretch">
+                <div id="invitationPageContainer" class="inv-page w-full border-2 border-gold-400 rounded-2xl p-6 sm:p-7 text-center bg-gradient-to-b from-ivory via-white to-pearl relative overflow-hidden flex flex-col justify-between shadow-inner">
+                    <!-- Dynamic Page Content Injected Here -->
+                </div>
+            </div>
+
+            <!-- Page Navigation Controls (Previous / Next) -->
+            <div class="flex items-center justify-between mt-4 px-1">
+                <button id="prevPageBtn" onclick="changePage(-1)" class="px-4 py-2 rounded-xl border border-gold-300 bg-white text-stone-700 hover:bg-gold-50 text-xs font-bold flex items-center gap-1.5 disabled:opacity-40 disabled:pointer-events-none transition-all">
+                    <i class="fas fa-chevron-right text-[10px]"></i>
+                    <span>الصفحة السابقة</span>
+                </button>
+
+                <!-- Page Dots -->
+                <div class="flex items-center gap-2">
+                    <span id="dot0" onclick="goToPage(0)" class="cursor-pointer w-2.5 h-2.5 rounded-full bg-gold-500 transition-all"></span>
+                    <span id="dot1" onclick="goToPage(1)" class="cursor-pointer w-2.5 h-2.5 rounded-full bg-gold-200 transition-all"></span>
+                    <span id="dot2" onclick="goToPage(2)" class="cursor-pointer w-2.5 h-2.5 rounded-full bg-gold-200 transition-all"></span>
+                </div>
+
+                <button id="nextPageBtn" onclick="changePage(1)" class="px-4 py-2 rounded-xl btn-gold text-white text-xs font-bold flex items-center gap-1.5 disabled:opacity-40 disabled:pointer-events-none transition-all">
+                    <span>الصفحة التالية</span>
+                    <i class="fas fa-chevron-left text-[10px]"></i>
+                </button>
+            </div>
+
+            <!-- Modal Order Actions (Direct WhatsApp & Instagram) -->
+            <div class="mt-4 pt-3 border-t border-gold-200/70 space-y-2">
+                <a id="modalWhatsappBtn1" href="#" target="_blank" rel="noopener noreferrer"
+                   class="w-full btn-gold text-white py-3 rounded-xl font-bold text-xs sm:text-sm flex items-center justify-center gap-2">
+                    <i class="fab fa-whatsapp text-lg"></i>
+                    <span>اطلب هذا النموذج عبر واتساب (0710674314)</span>
+                </a>
+                <div class="grid grid-cols-2 gap-2">
+                    <a id="modalWhatsappBtn2" href="#" target="_blank" rel="noopener noreferrer"
+                       class="btn-outline-gold text-stone-800 py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5">
+                        <i class="fab fa-whatsapp text-emerald-600"></i>
+                        <span>واتساب (0709338221)</span>
+                    </a>
+                    <a href="https://www.instagram.com/ouwis_invitations1/" target="_blank" rel="noopener noreferrer"
+                       class="btn-outline-gold text-stone-800 py-2 rounded-xl font-bold text-xs flex items-center justify-center gap-1.5">
+                        <i class="fab fa-instagram text-gold-600"></i>
+                        <span>صفحة الإنستغرام</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for Animations, Filtering & Multi-Page Modal -->
+    <script>
+        // 1. Subtle Floating Gold Sparkles Canvas
+        const canvas = document.getElementById('goldParticles');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class GoldSparkle {
+            constructor() {
+                this.reset();
+            }
+            reset() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2.5 + 0.8;
+                this.speedY = -(Math.random() * 0.4 + 0.15);
+                this.speedX = (Math.random() - 0.5) * 0.3;
+                this.alpha = Math.random() * 0.6 + 0.2;
+                this.fadeSpeed = Math.random() * 0.008 + 0.003;
+            }
+            update() {
+                this.y += this.speedY;
+                this.x += this.speedX;
+                this.alpha += this.fadeSpeed;
+                if (this.alpha >= 0.85 || this.alpha <= 0.1) {
+                    this.fadeSpeed = -this.fadeSpeed;
+                }
+                if (this.y < -10) {
+                    this.y = canvas.height + 10;
+                    this.x = Math.random() * canvas.width;
+                }
+            }
+            draw() {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(212, 175, 55, ${this.alpha})`;
+                ctx.shadowBlur = 8;
+                ctx.shadowColor = '#D4AF37';
+                ctx.fill();
+                ctx.restore();
+            }
+        }
+
+        function initParticles() {
+            particles = [];
+            const count = Math.min(45, Math.floor(window.innerWidth / 28));
+            for (let i = 0; i < count; i++) {
+                particles.push(new GoldSparkle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        // 2. Scroll Reveal Observer
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // 3. Category Filter Logic
+        function filterCards(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.dataset.filter === category) {
+                    btn.classList.remove('bg-white', 'text-stone-700', 'border', 'border-gold-200');
+                    btn.classList.add('bg-gold-500', 'text-white', 'shadow-md');
+                } else {
+                    btn.classList.add('bg-white', 'text-stone-700', 'border', 'border-gold-200');
+                    btn.classList.remove('bg-gold-500', 'text-white', 'shadow-md');
+                }
+            });
+
+            const items = document.querySelectorAll('.invitation-item');
+            items.forEach(item => {
+                if (category === 'all' || item.dataset.category === category) {
+                    item.style.display = 'flex';
+                    setTimeout(() => {
+                        item.style.opacity = '1';
+                        item.style.transform = 'translateY(0)';
+                    }, 30);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(15px)';
+                    setTimeout(() => {
+                        item.style.display = 'none';
+                    }, 250);
+                }
+            });
+        }
+
+        // 4. Multi-Page Invitation Templates Data (4 Full Interactive 3-Page Templates)
+        const invitationTemplates = {
+            wedding: {
+                title: 'دعوة زفاف ملكية',
+                tabNames: ['1. الغلاف والختم', '2. تفاصيل الحفل', '3. البرنامج والموقع'],
+                pages: [
+                    // Page 1: Luxury Envelope & Wax Seal
+                    `
+                    <div class="w-10 h-10 border-t-2 border-r-2 border-gold-500 absolute top-3 right-3 rounded-tr-lg"></div>
+                    <div class="w-10 h-10 border-t-2 border-l-2 border-gold-500 absolute top-3 left-3 rounded-tl-lg"></div>
+                    <div class="w-10 h-10 border-b-2 border-r-2 border-gold-500 absolute bottom-3 right-3 rounded-br-lg"></div>
+                    <div class="w-10 h-10 border-b-2 border-l-2 border-gold-500 absolute bottom-3 left-3 rounded-bl-lg"></div>
+
+                    <div class="stagger-1">
+                        <span class="inline-block text-[11px] font-bold tracking-widest text-gold-700 bg-gold-100/90 px-3.5 py-1 rounded-full border border-gold-300">ظرف دعوة زفاف ملكية</span>
+                    </div>
+
+                    <div class="my-auto py-4 stagger-2">
+                        <p class="font-serif text-lg text-gold-700 mb-1">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold gold-text-gradient my-2">أمين & نهيلة</h3>
+                        <p class="font-latin italic text-sm text-gold-700">Amine & Nouhaila</p>
+                        <div class="w-24 h-[1px] bg-gradient-to-r from-transparent via-gold-400 to-transparent mx-auto my-4"></div>
+                        <p class="text-xs text-stone-500 mb-4">اضغط على الختم الشمعي الذهبي لفتح الدعوة</p>
+                        
+                        <button onclick="openSealAndNext(this)" class="mx-auto w-20 h-20 rounded-full bg-gradient-to-br from-gold-300 via-gold-500 to-gold-700 text-white flex flex-col items-center justify-center shadow-xl wax-seal border-2 border-gold-100 hover:scale-110 transition-transform cursor-pointer group">
+                            <span class="font-latin font-bold text-lg tracking-wider">A&N</span>
+                            <span class="text-[9px] font-bold opacity-90 group-hover:underline">افتح الدعوة</span>
+                        </button>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-[11px] text-stone-400 font-latin" dir="ltr">@ouwis_invitations1</p>
+                    </div>
+                    `,
+                    // Page 2: Event Details, Names, Date, Time & Venue
+                    `
+                    <div class="w-8 h-8 border-t-2 border-r-2 border-gold-400 absolute top-3 right-3"></div>
+                    <div class="w-8 h-8 border-t-2 border-l-2 border-gold-400 absolute top-3 left-3"></div>
+
+                    <div class="stagger-1">
+                        <div class="text-gold-500 text-xl mb-1 gold-ribbon-glow"><i class="fas fa-crown"></i></div>
+                        <p class="text-xs font-bold text-gold-700">تتشرف عائلتا الكريمين بدعوتكم</p>
+                    </div>
+
+                    <div class="my-auto space-y-3 stagger-2">
+                        <h3 class="font-serif text-3xl font-bold gold-text-gradient">أمين & نهيلة</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed px-2">
+                            بكل مشاعر الفرح والسرور، يسرنا دعوتكم لمشاركتنا فرحة العمر وحضور حفل زفافنا المبارك وتناول وجبة العشاء.
+                        </p>
+
+                        <div class="grid grid-cols-2 gap-2.5 pt-2">
+                            <div class="bg-gold-50/80 border border-gold-300 rounded-xl p-2.5">
+                                <i class="fas fa-calendar-days text-gold-600 text-sm mb-1"></i>
+                                <p class="text-[11px] text-stone-500">التاريخ</p>
+                                <p class="text-xs font-bold text-stone-800">السبت 18 أكتوبر</p>
+                            </div>
+                            <div class="bg-gold-50/80 border border-gold-300 rounded-xl p-2.5">
+                                <i class="fas fa-clock text-gold-600 text-sm mb-1"></i>
+                                <p class="text-[11px] text-stone-500">التوقيت</p>
+                                <p class="text-xs font-bold text-stone-800">20:30 مساءً</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-gold-300 rounded-xl p-3 shadow-sm">
+                            <i class="fas fa-location-dot text-gold-600 text-sm mb-1"></i>
+                            <p class="text-xs font-bold text-gold-900">قاعة القصر الذهبي للأفراح - طنجة</p>
+                        </div>
+                    </div>
+
+                    <div class="stagger-3 pt-2">
+                        <span class="text-[11px] text-gold-700 font-semibold">دام الله الأفراح في دياركم العامرة</span>
+                    </div>
+                    `,
+                    // Page 3: Timeline & RSVP Interactive Preview
+                    `
+                    <div class="stagger-1">
+                        <span class="inline-block text-xs font-bold text-gold-800 bg-gold-100 px-3 py-1 rounded-full">برنامج الليلة والموقع</span>
+                    </div>
+
+                    <div class="my-auto space-y-2.5 text-right stagger-2">
+                        <div class="flex items-center gap-3 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <span class="w-14 text-center text-xs font-bold text-gold-700 bg-gold-50 py-1 rounded-lg">20:30</span>
+                            <span class="text-xs font-semibold text-stone-700">استقبال الضيوف بالحلويات والشاي المغربي</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <span class="w-14 text-center text-xs font-bold text-gold-700 bg-gold-50 py-1 rounded-lg">22:00</span>
+                            <span class="text-xs font-semibold text-stone-700">زفة العروسين الملكية والدقة المراكشية</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <span class="w-14 text-center text-xs font-bold text-gold-700 bg-gold-50 py-1 rounded-lg">23:30</span>
+                            <span class="text-xs font-semibold text-stone-700">مأدبة العشاء الفاخرة وحفل الكعكة</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-3 space-y-2 stagger-3">
+                        <div class="flex items-center justify-center gap-2">
+                            <button onclick="simulateRsvp(this)" class="flex-1 py-2 px-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+                                <i class="fas fa-check-circle ml-1"></i> تأكيد الحضور (نموذج)
+                            </button>
+                            <span class="py-2 px-3 rounded-xl bg-gold-50 border border-gold-300 text-gold-800 text-xs font-bold">
+                                <i class="fas fa-map-marked-alt ml-1"></i> GPS مرفق
+                            </span>
+                        </div>
+                    </div>
+                    `
+                ]
+            },
+
+            engagement: {
+                title: 'دعوة خطوبة راقية',
+                tabNames: ['1. بطاقة الترحيب', '2. موعد الخطوبة', '3. القاعة والتأكيد'],
+                pages: [
+                    // Page 1
+                    `
+                    <div class="w-10 h-10 border-t-2 border-r-2 border-gold-500 absolute top-3 right-3 rounded-tr-lg"></div>
+                    <div class="w-10 h-10 border-b-2 border-l-2 border-gold-500 absolute bottom-3 left-3 rounded-bl-lg"></div>
+
+                    <div class="stagger-1">
+                        <span class="inline-block text-[11px] font-bold text-gold-700 bg-gold-100 px-3.5 py-1 rounded-full border border-gold-300">بطاقة ترحيب متحركة</span>
+                    </div>
+
+                    <div class="my-auto py-4 stagger-2">
+                        <div class="text-gold-500 text-2xl mb-2 gold-ribbon-glow"><i class="fas fa-gem"></i></div>
+                        <p class="text-xs text-gold-700 font-semibold mb-1">أجمل اللحظات تبدأ بخطوة</p>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold gold-text-gradient my-2">حمزة & إيمان</h3>
+                        <p class="font-latin italic text-sm text-gold-700 mb-4">Hamza & Imane</p>
+                        <button onclick="openSealAndNext(this)" class="mx-auto px-6 py-3 rounded-full btn-gold text-white text-xs font-bold shadow-lg flex items-center gap-2">
+                            <i class="fas fa-envelope-open-text"></i>
+                            <span>اضغط لفتح تفاصيل الخطوبة</span>
+                        </button>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-[11px] text-stone-400 font-latin" dir="ltr">@ouwis_invitations1</p>
+                    </div>
+                    `,
+                    // Page 2
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">موعد حفل الخطوبة</span>
+                    </div>
+
+                    <div class="my-auto space-y-3 stagger-2">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-800">فرحة خطوبتنا تكتمل بكم</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed px-2">
+                            يسعدنا ويشرفنا دعوتكم لمشاركتنا بهجة حفل خطوبتنا المباركة، حضوركم يزيد ليلتنا تألقاً وسروراً.
+                        </p>
+                        <div class="bg-gradient-to-r from-gold-50 via-white to-gold-50 border border-gold-300 rounded-2xl p-3.5 space-y-1">
+                            <p class="text-xs font-bold text-gold-900"><i class="fas fa-calendar-check ml-1 text-gold-600"></i> الجمعة 14 نونبر</p>
+                            <p class="text-xs font-semibold text-stone-700"><i class="fas fa-clock ml-1 text-gold-600"></i> ابتداءً من الساعة 19:00 مساءً</p>
+                        </div>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-xs font-bold text-gold-700">العاقبة لديكم بالمسرات</p>
+                    </div>
+                    `,
+                    // Page 3
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-800 bg-gold-100 px-3 py-1 rounded-full">تفاصيل القاعة وتأكيد الحضور</span>
+                    </div>
+
+                    <div class="my-auto space-y-3 stagger-2">
+                        <div class="bg-white border border-gold-300 rounded-2xl p-4 shadow-sm">
+                            <i class="fas fa-building-columns text-gold-600 text-xl mb-1.5"></i>
+                            <h4 class="font-bold text-sm text-stone-800">فيلا الياسمين للمناسبات</h4>
+                            <p class="text-xs text-stone-500 mt-1">طريق مالاباطا - قاعة الاستقبال الكبرى</p>
+                        </div>
+
+                        <div class="bg-gold-50/70 border border-gold-200 rounded-xl p-3 text-xs text-stone-600">
+                            يرجى تأكيد حضوركم الكريم لتخصيص مقاعدكم بكل محبة
+                        </div>
+                    </div>
+
+                    <div class="pt-2 stagger-3">
+                        <button onclick="simulateRsvp(this)" class="w-full py-2.5 px-4 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold hover:bg-emerald-100 transition-colors">
+                            <i class="fas fa-heart ml-1"></i> يسعدني الحضور (معاينة التفاعل)
+                        </button>
+                    </div>
+                    `
+                ]
+            },
+
+            birthday: {
+                title: 'دعوة عيد ميلاد فاخرة',
+                tabNames: ['1. غلاف ذهبي لامع', '2. تفاصيل الاحتفال', '3. فقرات الحفل'],
+                pages: [
+                    // Page 1
+                    `
+                    <div class="stagger-1">
+                        <span class="inline-block text-[11px] font-bold text-gold-700 bg-gold-100 px-3.5 py-1 rounded-full border border-gold-300">غلاف ذهبي لامع</span>
+                    </div>
+
+                    <div class="my-auto py-4 stagger-2">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-gold-100 border-2 border-gold-400 flex items-center justify-center text-gold-600 text-2xl mb-3 wax-seal">
+                            <i class="fas fa-cake-candles"></i>
+                        </div>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold gold-text-gradient mb-1">عيد ميلاد ريتاج</h3>
+                        <p class="font-latin italic text-sm text-gold-700 mb-4">Happy 5th Birthday Ritaj</p>
+                        <button onclick="openSealAndNext(this)" class="mx-auto px-6 py-3 rounded-full btn-gold text-white text-xs font-bold shadow-lg flex items-center gap-2">
+                            <i class="fas fa-sparkles"></i>
+                            <span>افتح بطاقة الدعوة</span>
+                        </button>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-[11px] text-stone-400 font-latin" dir="ltr">@ouwis_invitations1</p>
+                    </div>
+                    `,
+                    // Page 2
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">تفاصيل الاحتفال</span>
+                    </div>
+
+                    <div class="my-auto space-y-3 stagger-2">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-800">شمعة جديدة تضيء حياتنا!</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed px-2">
+                            ندعوكم لمشاركتنا أجمل اللحظات والاحتفال بعيد ميلاد أميرتنا الصغيرة ريتاج في جو مليء بالمرح والهدايا.
+                        </p>
+                        <div class="grid grid-cols-2 gap-2.5 pt-1">
+                            <div class="bg-gold-50 border border-gold-300 rounded-xl p-2.5">
+                                <p class="text-[11px] text-stone-500">اليوم والتاريخ</p>
+                                <p class="text-xs font-bold text-stone-800">الأحد 22 دجنبر</p>
+                            </div>
+                            <div class="bg-gold-50 border border-gold-300 rounded-xl p-2.5">
+                                <p class="text-[11px] text-stone-500">الساعة</p>
+                                <p class="text-xs font-bold text-stone-800">16:30 مساءً</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-xs font-bold text-gold-700">حضوركم يسعد صغيرتنا</p>
+                    </div>
+                    `,
+                    // Page 3
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-800 bg-gold-100 px-3 py-1 rounded-full">فقرات الحفل والمكان</span>
+                    </div>
+
+                    <div class="my-auto space-y-2.5 text-right stagger-2">
+                        <div class="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <i class="fas fa-wand-sparkles text-gold-600"></i>
+                            <span class="text-xs font-semibold text-stone-700">عروض بهلوانية وألعاب ترفيهية للأطفال</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <i class="fas fa-birthday-cake text-gold-600"></i>
+                            <span class="text-xs font-semibold text-stone-700">لحظة إطفاء الشموع وتقطيع الكعكة الملكية</span>
+                        </div>
+                        <div class="bg-gold-50 border border-gold-300 rounded-xl p-2.5 text-center">
+                            <p class="text-xs font-bold text-gold-900"><i class="fas fa-map-pin ml-1"></i> نادي الأطفال الذهبي - وسط المدينة</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 stagger-3">
+                        <button onclick="simulateRsvp(this)" class="w-full py-2 px-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold">
+                            <i class="fas fa-check ml-1"></i> سنكون في الموعد
+                        </button>
+                    </div>
+                    `
+                ]
+            },
+
+            baby: {
+                title: 'دعوة عقيقة / تخرج مميزة',
+                tabNames: ['1. بطاقة التهنئة', '2. تفاصيل المناسبة', '3. البرنامج والموقع'],
+                pages: [
+                    // Page 1
+                    `
+                    <div class="stagger-1">
+                        <span class="inline-block text-[11px] font-bold text-gold-700 bg-gold-100 px-3.5 py-1 rounded-full border border-gold-300">بطاقة تهنئة ملكية</span>
+                    </div>
+
+                    <div class="my-auto py-4 stagger-2">
+                        <div class="w-16 h-16 mx-auto rounded-full bg-gold-100 border-2 border-gold-400 flex items-center justify-center text-gold-600 text-2xl mb-3 wax-seal">
+                            <i class="fas fa-baby-carriage"></i>
+                        </div>
+                        <p class="text-xs text-gold-700 font-semibold mb-1">الحمد لله الذي بنعمته تتم الصالحات</p>
+                        <h3 class="font-serif text-3xl sm:text-4xl font-bold gold-text-gradient mb-1">المولود آدم</h3>
+                        <p class="font-latin italic text-sm text-gold-700 mb-4">Welcome Baby Adam</p>
+                        <button onclick="openSealAndNext(this)" class="mx-auto px-6 py-3 rounded-full btn-gold text-white text-xs font-bold shadow-lg flex items-center gap-2">
+                            <i class="fas fa-envelope-open"></i>
+                            <span>افتح بطاقة العقيقة</span>
+                        </button>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-[11px] text-stone-400 font-latin" dir="ltr">@ouwis_invitations1</p>
+                    </div>
+                    `,
+                    // Page 2
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-700 bg-gold-50 px-3 py-1 rounded-full border border-gold-200">تفاصيل المناسبة</span>
+                    </div>
+
+                    <div class="my-auto space-y-3 stagger-2">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-stone-800">رزقنا الله بمولودنا الغالي</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed px-2">
+                            نتشرف بدعوتكم لحضور حفل عقيقة (سبوع) أميرنا الصغير آدم ومشاركتنا فرحتنا بقدومه، بارك الله لنا ولكم.
+                        </p>
+                        <div class="bg-gold-50/90 border border-gold-300 rounded-2xl p-3 space-y-1">
+                            <p class="text-xs font-bold text-gold-900">السبت 05 يوليوز • الساعة 18:00 مساءً</p>
+                            <p class="text-[11px] text-stone-600">قاعة الاستقبالات الملكية</p>
+                        </div>
+                    </div>
+
+                    <div class="stagger-3">
+                        <p class="text-xs font-bold text-gold-700">تُصمم أيضاً لحفلات التخرج والختان</p>
+                    </div>
+                    `,
+                    // Page 3
+                    `
+                    <div class="stagger-1">
+                        <span class="text-xs font-bold text-gold-800 bg-gold-100 px-3 py-1 rounded-full">البرنامج والموقع</span>
+                    </div>
+
+                    <div class="my-auto space-y-2.5 text-right stagger-2">
+                        <div class="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <span class="text-xs font-bold text-gold-700 bg-gold-50 px-2 py-1 rounded">18:00</span>
+                            <span class="text-xs font-semibold text-stone-700">استقبال الضيوف بالحليب والتمر والحلويات</span>
+                        </div>
+                        <div class="flex items-center gap-2.5 bg-white p-2.5 rounded-xl border border-gold-200">
+                            <span class="text-xs font-bold text-gold-700 bg-gold-50 px-2 py-1 rounded">20:30</span>
+                            <span class="text-xs font-semibold text-stone-700">مأدبة العشاء المغربية الأصيلة</span>
+                        </div>
+                        <div class="bg-gold-50 border border-gold-300 rounded-xl p-2.5 text-center">
+                            <p class="text-xs font-bold text-gold-900"><i class="fas fa-location-arrow ml-1"></i> رابط الموقع المباشر مرفق بالدعوة</p>
+                        </div>
+                    </div>
+
+                    <div class="pt-2 stagger-3">
+                        <button onclick="simulateRsvp(this)" class="w-full py-2 px-3 rounded-xl bg-emerald-50 border border-emerald-300 text-emerald-800 text-xs font-bold">
+                            <i class="fas fa-check-circle ml-1"></i> تأكيد الحضور
+                        </button>
+                    </div>
+                    `
+                ]
+            }
+        };
+
+        const modal = document.getElementById('previewModal');
+        const pageContainer = document.getElementById('invitationPageContainer');
+        let currentTemplateKey = 'wedding';
+        let currentPageIndex = 0;
+
+        function openMultiPageModal(templateKey) {
+            currentTemplateKey = templateKey;
+            currentPageIndex = 0;
+            const tpl = invitationTemplates[templateKey];
+
+            document.getElementById('modalTemplateName').textContent = tpl.title;
+            
+            // Update tab labels for this specific template
+            tpl.tabNames.forEach((name, idx) => {
+                document.getElementById(`tabBtn${idx}`).textContent = name;
+            });
+
+            // Update WhatsApp order links
+            const encodedMsg = encodeURIComponent(`السلام عليكم ouwis_invitations1، عجبني نموذج (${tpl.title} - متعددة الصفحات) وبغيت نطلب تصميم بحالو.`);
+            document.getElementById('modalWhatsappBtn1').href = `https://wa.me/212710674314?text=${encodedMsg}`;
+            document.getElementById('modalWhatsappBtn2').href = `https://wa.me/212709338221?text=${encodedMsg}`;
+
+            renderInvitationPage('next');
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function renderInvitationPage(direction = 'next') {
+            const tpl = invitationTemplates[currentTemplateKey];
+            const totalPages = tpl.pages.length;
+
+            // Trigger 3D flip animation
+            pageContainer.classList.remove('inv-page-enter-next', 'inv-page-enter-prev');
+            void pageContainer.offsetWidth; // Force reflow
+            pageContainer.classList.add(direction === 'next' ? 'inv-page-enter-next' : 'inv-page-enter-prev');
+
+            pageContainer.innerHTML = tpl.pages[currentPageIndex];
+
+            // Update counters, tabs, dots & buttons
+            document.getElementById('pageCounterBadge').textContent = `صفحة ${currentPageIndex + 1} من ${totalPages}`;
+            document.getElementById('prevPageBtn').disabled = currentPageIndex === 0;
+            document.getElementById('nextPageBtn').disabled = currentPageIndex === totalPages - 1;
+
+            for (let i = 0; i < totalPages; i++) {
+                const tab = document.getElementById(`tabBtn${i}`);
+                const dot = document.getElementById(`dot${i}`);
+                if (i === currentPageIndex) {
+                    tab.classList.add('bg-gold-500', 'text-white', 'shadow-sm');
+                    tab.classList.remove('text-stone-600');
+                    dot.classList.add('bg-gold-500', 'w-5');
+                    dot.classList.remove('bg-gold-200', 'w-2.5');
+                } else {
+                    tab.classList.remove('bg-gold-500', 'text-white', 'shadow-sm');
+                    tab.classList.add('text-stone-600');
+                    dot.classList.remove('bg-gold-500', 'w-5');
+                    dot.classList.add('bg-gold-200', 'w-2.5');
+                }
+            }
+        }
+
+        function changePage(step) {
+            const totalPages = invitationTemplates[currentTemplateKey].pages.length;
+            const nextIdx = currentPageIndex + step;
+            if (nextIdx >= 0 && nextIdx < totalPages) {
+                currentPageIndex = nextIdx;
+                renderInvitationPage(step > 0 ? 'next' : 'prev');
+            }
+        }
+
+        function goToPage(index) {
+            if (index === currentPageIndex) return;
+            const dir = index > currentPageIndex ? 'next' : 'prev';
+            currentPageIndex = index;
+            renderInvitationPage(dir);
+        }
+
+        function openSealAndNext(btn) {
+            btn.classList.add('scale-125', 'opacity-0', 'transition-all', 'duration-300');
+            setTimeout(() => {
+                changePage(1);
+            }, 260);
+        }
+
+        function simulateRsvp(btn) {
+            btn.innerHTML = '<i class="fas fa-sparkles ml-1"></i> تم تسجيل تأكيد الحضور بنجاح!';
+            btn.classList.remove('bg-emerald-50', 'text-emerald-800');
+            btn.classList.add('bg-emerald-600', 'text-white');
+        }
+
+        function closePreviewModal() {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+        }
+
+        // Close modal when clicking outside card
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closePreviewModal();
+            }
+        });
+    </script>
+</body>
+</html>
